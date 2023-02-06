@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	
+    <Header title="Guide" />
+
+		<p class="instructions">
+			To get started, <strong>follow the links in sidebar </strong>
+		</p>
+		
+		<div class="grid place-items-center h-screen content-center">
+			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
+		</div>
+
+</Layout>
+
+<style>
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+</style>

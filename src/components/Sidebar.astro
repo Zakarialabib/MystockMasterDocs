@@ -1,0 +1,48 @@
+--- 
+import Card from "../components/Card.astro";
+---
+
+<aside class="fixed inset-y-0 z-20 flex flex-col py-4 pl-1 space-y-6 bg-white shadow-lg w-[210px] overflow-y-scroll" 
+        style="transition-property: width, transform; transition-duration: 150ms;"
+>
+<div class="flex items-center justify-between flex-shrink-0 px-3">
+    <!-- Logo -->
+    <a href="/" class="text-xl font-semibold">
+        <img class="w-14 h-auto" src="/logo.png" alt="myStockMaster">
+        <span class="sr-only">
+            MystockMaster
+        </span>
+    </a>
+</div>
+<ul role="list" class="link-card-grid">
+    <Card
+        href="/docs/"
+        title="Documentation"
+        body="Learn how use myStockMaster"
+    />
+    <Card
+        href="/installation/"
+        title="Installation"
+        body="use installer or follow step by step guide."
+    />
+    <Card
+        href="/videos/"
+        title="Videos"
+        body="Explore our video tutorials."
+    />
+    <Card
+        href="https://astro.build/chat/"
+        title="Community"
+        body="Come say hi to our amazing Discord community. ❤️"
+    />
+</ul>
+  
+</aside>
+<style>
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+</style>
