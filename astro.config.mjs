@@ -8,5 +8,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://zakarialabib.github.io',
+  base: '/mystockmasterdocs',
   integrations: [tailwind(), mdx()]
 });
